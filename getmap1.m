@@ -1,0 +1,11 @@
+function [map,detect_map]=getmap1()%返回原始地图map和未探测地图detect_map
+detect_map=ones(42,82);%待探测的地图，三个状态：1未探测，2障碍，0无障碍
+map=zeros(42,82);
+map(1,:)=2;
+map(42,:)=2;
+map(:,1)=2;
+map(:,82)=2;
+map(10:32,40:50)=2;
+map(2:21,61:81)=2;
+map(8:9,5:50)=2;
+map(33:34,2:50)=2;
